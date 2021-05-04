@@ -26,6 +26,10 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+    
+  <!-- Swal alert box -->
+  <link href="node_modules/sweetalert2/dist/sweetalert2.css" rel="stylesheet"/>
+  <link href="assets/css/style.css" rel ="stylesheet"/>    
 
   <!-- =======================================================
   * Template Name: iPortfolio - v1.5.1
@@ -61,7 +65,6 @@
           <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio"><i class="bx bx-book-content"></i> Portfolio</a></li>
           <li><a href="#services"><i class="bx bx-server"></i> Services</a></li>
           <li><a href="#contact"><i class="bx bx-envelope"></i> Contact</a></li>
 
@@ -76,7 +79,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container" data-aos="fade-in">
       <h1>Vijay Sandeep Goli</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Adventurer, Explorer"></span></p>
+      <p>I'm <span class="typed" data-typed-items="a Freelancer,a Developer, an Adventurer,an Explorer"></span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -338,14 +341,14 @@ A key strength is communication; building strong relationships with people in or
                 <h4>Call:</h4>
                 <p>+91 9177355454</p>
               </div>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.778157114673!2d82.2500718149529!3d16.985459088320667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3829266a71ef9b%3A0x8deee87b2c440245!2sSai%20Trisira%20Sadan!5e0!3m2!1sen!2sin!4v1614233588589!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3815.778157114673!2d82.2500718149529!3d16.985459088320667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3829266a71ef9b%3A0x8deee87b2c440245!2sSai%20Trisira%20Sadan!5e0!3m2!1sen!2sin!4v1614233588589!5m2!1sen!2sin" width="340" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
              
             </div>
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">   
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form" onsubmit="return validation()">
               <div class="form-row"><br />
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
@@ -372,8 +375,9 @@ A key strength is communication; building strong relationships with people in or
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
+                  
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+              <div class="text-center"><button onclick="sendmessage()" type="submit" class="w3-button w3-blue">Send Message</button></div> 
             </form>
           </div>
 
@@ -414,6 +418,7 @@ A key strength is communication; building strong relationships with people in or
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
+ 
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
